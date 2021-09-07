@@ -29,6 +29,20 @@ body {
 	background-position: center center;
 }
 
+#timer {
+	width: 10%;
+	height: 7%;
+	border-radius: 10px;
+	position: absolute;
+	left: 90%;
+	background-color: rgba(48, 69, 77, 0.8);
+	font-family: 'Concert One', cursive;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 #helper {
 	width: 100%;
 	border: 1px solid black;
