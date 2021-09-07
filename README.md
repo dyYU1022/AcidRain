@@ -7,7 +7,7 @@ Simple clone coding of the game 'acid rain'
 - [ ] style.css : make replay more fancy 
 
 ## to add   
-- [ ] countdown   
+- [] countdown   
 - [ ] timeout   
 - [ ] make words move down to helper   
 - [ ] make words disappear when it reaches the helper
