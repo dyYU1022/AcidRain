@@ -2,14 +2,15 @@
 Simple clone coding of the game 'acid rain'
 
 ## to fix   
-- [ ] initializer.js : fix the way it rearranges words when resizing occurs to act as efficient as possible.   
+- [x] initializer.js : fix the way it rearranges words when resizing occurs to act as efficient as possible.   
   + In current way, delay would be occurred if the number of words increases.   
+  → change postion value from px to percentage, remove resize event listener.
 - [ ] style.css : make replay more fancy 
 
 ## to add   
-- [x] countdown   
+- [x] countdown
 - [ ] timeout: occur when clearInterval is ran. make gameover pop up(words left > 0).   
-- [ ] make words move down to helper(or specific point).   
+- [ ] make words move down to helper(or to specific point).   
 - [ ] make words disappear when it reaches the helper(or when it is positioned at specific point).   
 - [ ] check the number of words left, removed by pc, removed by userinput.   
       - total words === words removed by user : clear!   
