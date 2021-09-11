@@ -27,6 +27,7 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
+	font-family: 'Concert One', cursive;
 }
 
 #timer {
@@ -47,13 +48,12 @@ body {
 	width: 100%;
 	border: 1px solid black;
 	position: absolute;
-	bottom: 17%;
+	top: 83%;
 }
 
 .word {
-	position: fixed;
-	font-family: 'Concert One', cursive;
-	font-size: 20px;
+	position: absolute;
+	font-size: 18px;
 }
 
 #user_input {
