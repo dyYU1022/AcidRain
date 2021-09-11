@@ -18,36 +18,26 @@ function getRandomInt(min, max) {
 }
 
 function paintWords() {
-
-	const currentWords = document.querySelectorAll('.word');
-	if (currentWords.length !== 0) {
-		for (let word of currentWords) {
-			word.remove();
-		}
-	}
-	
-	const minX = contents.offsetLeft;
-	const maxX = window.innerWidth - minX - 150;
-	const minY = contents.offsetTop;
-	const maxY = helper.offsetTop - 30;
+	//convert px value to percentage value
+	const maxY = Math.floor((helper.offsetTop/contents.offsetHeight) * 100);
 	
 	for (let word of words) {
 		const span = document.createElement('span');
 		span.classList.add('word');
 		span.setAttribute('data-word', word);
 		span.innerText = word;
-		span.style.left = `${getRandomInt(minX, maxX)}px`
-		span.style.top = `${getRandomInt(minY, maxY)}px`
+		span.style.left = `${getRandomInt(10, 70)}%`
+		span.style.top = `${getRandomInt(10, maxY)}%`
 		contents.append(span);
 	}
 }
 
 function finishChecker() {
-	const words = document.querySelectorAll('.word');
-	if (words.length === 0) {
+	const currentWords = document.querySelectorAll('.word');
+	if (currentWords.length === 0) {
 		alert('Success!');
 		const replay = confirm('replay?');
-		replay && paintWords();
+		replay ? paintWords():None;
 	}
 }
 
@@ -62,4 +52,3 @@ function wordChecker() {
 
 paintWords();
 input.addEventListener('change', wordChecker);
-window.addEventListener('resize', paintWords);
